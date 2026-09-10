@@ -1,0 +1,42 @@
+plugins {
+  id 'java'
+  id 'com.vanniktech.maven.publish' version('0.37.0')
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+
+}
+
+mavenPublishing {
+  coordinates(group.toString(), 'gdx-relativeui', version.toString())
+
+  pom {
+    name = "gdx-relativeui"
+    description = "RelativeLayout for LibGDX Scene2d."
+    inceptionYear = "2026"
+    url = "https://github.com/iktools/gdx-relativeui"
+    licenses {
+      license {
+        name = "MIT License"
+        url = "https://mit-license.org/"
+        distribution = "https://mit-license.org/"
+      }
+    }
+    developers {
+      developer {
+        id = "iktools"
+        name = "IK Tools"
+        url = "https://github.com/iktools/"
+      }
+    }
+    scm {
+      url = "https://github.com/iktools/gdx-relativeui"
+      connection = "scm:git:git://github.com/iktools/gdx-relativeui.git"
+      developerConnection = "scm:git:ssh://git@github.com/iktools/gdx-relativeui.git"
+    }
+  }
+}
