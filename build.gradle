@@ -23,6 +23,9 @@ allprojects {
       testOutputDir = file('build/classes/java/test')
     }
   }
+
+  group = "io.github.iktools"
+  version = "0.1"
 }
 
 configure(subprojects) {
