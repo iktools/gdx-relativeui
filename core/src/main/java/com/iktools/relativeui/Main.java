@@ -22,7 +22,9 @@ public class Main extends ApplicationAdapter {
         rootTable.add(new Label("Column 1", skin));
         
         RelativeLayout relativeLayout = new RelativeLayout();
-        rootTable.add(relativeLayout);
+        rootTable.add(relativeLayout).grow();
+        
+        relativeLayout.add(new Label("Top left", skin));
 
         stage.addActor(rootTable);
     }
