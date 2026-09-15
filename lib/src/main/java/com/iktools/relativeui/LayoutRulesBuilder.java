@@ -44,6 +44,16 @@ public class LayoutRulesBuilder {
     public RulesPaddingBuilder bottom() {
     	return this.addRule(pad -> new AlignWithParentV(actor, 0f, 0f, pad));
     }
+    
+    public LayoutRulesBuilder centerH() {
+    	this.rules.add(new AlignWithParentH(actor, 0.5f, -0.5f, 0));
+    	return this.parent;
+    }
+    
+    public LayoutRulesBuilder centerV() {
+    	this.rules.add(new AlignWithParentV(actor, 0.5f, -0.5f, 0));
+    	return this.parent;
+    }
 
     public void execute(float parentWidth, float parentHeight) {
         for (ILayoutRule rule: this.rules) {
@@ -52,7 +62,7 @@ public class LayoutRulesBuilder {
     }
     
     protected void replaceLast(ILayoutRule rule) {
-    	rules.set(rules.size() - 1, rule);
+    	this.rules.set(rules.size() - 1, rule);
     }
     
     private RulesPaddingBuilder addRule(ApplyPadding rule) {
