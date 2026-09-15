@@ -9,6 +9,16 @@ repositories {
 
 dependencies {
 	api "com.badlogicgames.gdx:gdx:$gdxVersion"
+
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+	testImplementation 'org.mockito:mockito-core:4.11.0'
+	testImplementation 'org.mockito:mockito-inline:4.11.0'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+	useJUnitPlatform()
+	systemProperty 'net.bytebuddy.experimental', 'true'
 }
 
 mavenPublishing {
