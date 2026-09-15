@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class RelativeLayout extends WidgetGroup {
 	private boolean sizeInvalid = true;
-    private Map<Actor, LayoutRulesBuilder> layoutRules = new HashMap<>();
+    private final Map<Actor, LayoutRulesBuilder> layoutRules = new HashMap<>();
 
 	public LayoutRulesBuilder add(Actor actor) {
         LayoutRulesBuilder rulesBuilder = new LayoutRulesBuilder(actor);
