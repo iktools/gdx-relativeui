@@ -1,7 +1,7 @@
 ## Gradle:
 .gradle/
 gradle-app.setting
-/build/
+build/
 /android/build/
 /core/build/
 /lwjgl2/build/

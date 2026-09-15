@@ -20,11 +20,11 @@ public class Main extends ApplicationAdapter {
         Table rootTable = new Table();
         rootTable.setFillParent(true);
         rootTable.add(new Label("Column 1", skin));
-        
+
         RelativeLayout relativeLayout = new RelativeLayout();
         rootTable.add(relativeLayout).grow();
-        
-        relativeLayout.add(new Label("Top left", skin));
+
+        relativeLayout.add(new Label("Top left", skin)).right();
 
         stage.addActor(rootTable);
     }
