@@ -4,10 +4,10 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 
 public class AlignWithParentV implements ILayoutRule {
 
-    float parentY;
-    float actorY;
-    Actor actor;
-    float offset;
+    final float parentY;
+    final float actorY;
+    final Actor actor;
+    final float offset;
 
     public AlignWithParentV(Actor actor, float parentY, float actorY, float offset) {
         this.actor = actor;

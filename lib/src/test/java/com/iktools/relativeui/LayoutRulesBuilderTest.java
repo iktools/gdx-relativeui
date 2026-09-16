@@ -3,8 +3,7 @@ package com.iktools.relativeui;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -30,7 +29,7 @@ public class LayoutRulesBuilderTest {
 
 		RulesPaddingBuilder result = builder.left();
 
-		assertTrue(result instanceof RulesPaddingBuilder);
+        assertInstanceOf(RulesPaddingBuilder.class, result);
 		builder.execute(PARENT_WIDTH, PARENT_HEIGHT);
 		verify(actor).setX(0f);
 	}
@@ -42,7 +41,7 @@ public class LayoutRulesBuilderTest {
 
 		RulesPaddingBuilder result = builder.right();
 
-		assertTrue(result instanceof RulesPaddingBuilder);
+        assertInstanceOf(RulesPaddingBuilder.class, result);
 		builder.execute(PARENT_WIDTH, PARENT_HEIGHT);
 		verify(actor).setX(PARENT_WIDTH - ACTOR_WIDTH);
 	}
@@ -54,7 +53,7 @@ public class LayoutRulesBuilderTest {
 
 		RulesPaddingBuilder result = builder.top();
 
-		assertTrue(result instanceof RulesPaddingBuilder);
+        assertInstanceOf(RulesPaddingBuilder.class, result);
 		builder.execute(PARENT_WIDTH, PARENT_HEIGHT);
 		verify(actor).setY(PARENT_HEIGHT - ACTOR_HEIGHT);
 	}
@@ -66,7 +65,7 @@ public class LayoutRulesBuilderTest {
 
 		RulesPaddingBuilder result = builder.bottom();
 
-		assertTrue(result instanceof RulesPaddingBuilder);
+        assertInstanceOf(RulesPaddingBuilder.class, result);
 		builder.execute(PARENT_WIDTH, PARENT_HEIGHT);
 		verify(actor).setY(0f);
 	}
