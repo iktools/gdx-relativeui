@@ -24,7 +24,9 @@ public class Main extends ApplicationAdapter {
         RelativeLayout relativeLayout = new RelativeLayout();
         rootTable.add(relativeLayout).grow();
 
-        relativeLayout.add(new Label("Move around", skin)).centerV();
+        Label child1 = new Label("Move around", skin);
+        relativeLayout.add(child1).centerV();
+        relativeLayout.add(new Label("Follower", skin)).below(child1);
 
         stage.addActor(rootTable);
     }

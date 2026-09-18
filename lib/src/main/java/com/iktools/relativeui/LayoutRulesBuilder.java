@@ -1,6 +1,7 @@
 package com.iktools.relativeui;
 
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.iktools.relativeui.rules.AlignWithParentV;
 import com.iktools.relativeui.rules.AlignWithParentH;
 import com.iktools.relativeui.rules.ApplyPadding;
@@ -54,7 +55,19 @@ public class LayoutRulesBuilder {
     	this.rules.add(new AlignWithParentV(actor, 0.5f, -0.5f, 0));
     	return this.parent;
     }
+    
+    /*
+     * Sibling actor relative
+     */
 
+    public RulesPaddingBuilder below(Actor target) {
+    	return this.addRule(pad -> /* TODO */);
+	}
+
+    /*
+     * Pluming
+     */
+    
     public void execute(float parentWidth, float parentHeight) {
         for (ILayoutRule rule: this.rules) {
             rule.execute(parentWidth, parentHeight);
